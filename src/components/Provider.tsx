@@ -1,8 +1,8 @@
-import ApiLoadingProvider from "@/context/apiLoadingContext";
-import { ReactNode } from "react";
+import { TableRowsProvider } from '@/context/tableRowsContext';
+import { ReactNode } from 'react';
 
 const AppProvider = ({ children }: { children: ReactNode }) => {
-    return <ApiLoadingProvider>{children}</ApiLoadingProvider>;
+    return <TableRowsProvider>{children}</TableRowsProvider>;
 };
 
 export default AppProvider;

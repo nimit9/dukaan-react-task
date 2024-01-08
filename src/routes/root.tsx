@@ -1,12 +1,9 @@
-import Dashboard from "@/components/dashboard/Dashboard";
-import DashboardPanel from "@/components/DashboardPanel";
-import { useApiLoading } from "@/context/apiLoadingContext";
+import Dashboard from '@/components/dashboard/Dashboard';
+import DashboardPanel from '@/components/DashboardPanel';
 
 const Root = () => {
-    const { apiLoading } = useApiLoading();
-
     return (
-        <div className='w-full flex items-stretch'>
+        <div className="w-full flex items-stretch">
             <DashboardPanel />
 
             <Dashboard />

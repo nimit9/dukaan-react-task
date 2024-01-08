@@ -1,42 +1,30 @@
-import { AiOutlineCaretDown } from "react-icons/ai";
-import { CiCircleInfo } from "react-icons/ci";
+import { useTableRows } from '@/context/tableRowsContext';
 
 const TableRows = () => {
-    const tableRows = Array.from({ length: 2 }).map(() => [
-        "#281209",
-        "7 July, 2023",
-        "₹1278.23",
-        "₹22",
-    ]);
+    const { searchedRows } = useTableRows()!;
 
     return (
         <>
-            {tableRows.map((row, rowIndex) => {
+            {searchedRows.slice(0, 10).map((row, rowIndex) => {
                 return (
                     <>
-                        <div className='grid grid-cols-4 px-3 py-1 text-sm rounded'>
-                            {row.map((value, index) => (
-                                <div
-                                    className={`flex items-center gap-0.5 w-full py-2 ${
-                                        index < 2
-                                            ? "justify-start"
-                                            : "justify-end"
-                                    }`}
-                                >
-                                    <span
-                                        className={
-                                            index === 0
-                                                ? "text-[#146eb4] font-medium"
-                                                : ""
-                                        }
-                                    >
-                                        {value}
-                                    </span>
-                                </div>
-                            ))}
+                        <div className="grid grid-cols-4 px-3 py-2 text-sm rounded">
+                            <span className="text-[#146eb4] font-medium">
+                                {row.orderId}
+                            </span>
+
+                            <span>{row.orderDate}</span>
+
+                            <span className="text-right">
+                                ₹{row.orderAmount}
+                            </span>
+
+                            <span className="text-right">
+                                ₹{row.transactionFees}
+                            </span>
                         </div>
 
-                        <hr className='w-full' />
+                        <hr className="w-full" />
                     </>
                 );
             })}
