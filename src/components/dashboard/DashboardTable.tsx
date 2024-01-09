@@ -16,7 +16,7 @@ const DashboardTable = () => {
     return (
         <div className="w-full bg-white p-2 rounded-md shadow-sm">
             <div className="flex justify-between w-full">
-                <div className="border-[##d9d9d9] border  py-1.5 px-2 flex items-center gap-2 rounded text-sm w-1/4">
+                <div className="border-[##d9d9d9] border  py-1.5 px-2 flex items-center gap-2 rounded text-sm w-1/4 mb:w-3/5">
                     <CiSearch size={20} />
                     <input
                         placeholder="Search by order ID..."

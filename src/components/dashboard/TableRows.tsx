@@ -8,7 +8,7 @@ const TableRows = () => {
             {searchedRows?.map((row, rowIndex) => {
                 return (
                     <>
-                        <div className="grid grid-cols-4 px-3 py-2 text-sm rounded">
+                        <div className="grid grid-cols-4 px-3 py-2 text-sm rounded mb:text-xs">
                             <span className="text-[#146eb4] font-medium cursor-pointer">
                                 {row.orderId}
                             </span>
