@@ -17,7 +17,7 @@ const DashboardStats = () => {
         },
         {
             heading: 'Amount Received',
-            stat: '₹ 23,92,312,19',
+            stat: '₹ 23,92,312.19',
         },
     ];
     return (
