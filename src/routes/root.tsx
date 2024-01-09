@@ -1,5 +1,5 @@
-import Dashboard from '@/components/dashboard/Dashboard';
-import DashboardPanel from '@/components/DashboardPanel';
+import Dashboard from '../components/dashboard/Dashboard';
+import DashboardPanel from '../components/DashboardPanel';
 
 const Root = () => {
     return (

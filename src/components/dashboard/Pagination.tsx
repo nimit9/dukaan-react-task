@@ -1,7 +1,7 @@
 import React from 'react';
 import DashboardButton from './DashboardButton';
 import { FaAngleLeft, FaAngleRight } from 'react-icons/fa6';
-import { useTableRows } from '@/context/tableRowsContext';
+import { useTableRows } from '../../context/tableRowsContext';
 
 const Pagination = () => {
     const { noOfPages, handlePageChange, currentPage } = useTableRows()!;

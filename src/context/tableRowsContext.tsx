@@ -6,7 +6,6 @@ import {
     useState,
 } from 'react';
 
-import { LoadingContextType } from '@/types/api-loading';
 import MOCK_DATA from '../mockData/MOCK_DATA.json';
 
 export interface ITableRow {

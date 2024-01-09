@@ -8,7 +8,7 @@ import DashboardButton from './DashboardButton';
 import TableHeader from './TableHeader';
 import TableRows from './TableRows';
 import { TbArrowsSort } from 'react-icons/tb';
-import { useTableRows } from '@/context/tableRowsContext';
+import { useTableRows } from '../../context/tableRowsContext';
 import Pagination from './Pagination';
 
 const DashboardTable = () => {

@@ -1,4 +1,4 @@
-import { useTableRows } from '@/context/tableRowsContext';
+import { useTableRows } from '../../context/tableRowsContext';
 
 const TableRows = () => {
     const { searchedRows } = useTableRows()!;

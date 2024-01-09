@@ -2,10 +2,9 @@
     "name": "splitwiser-web",
     "version": "1.0.0",
     "description": "",
-    "main": "index.js",
     "scripts": {
         "start": "parcel src/index.html",
-        "build": "parcel build",
+        "build": "parcel build src/index.html",
         "test": "jest"
     },
     "author": "",
@@ -17,6 +16,7 @@
         "react-router-dom": "^6.21.1"
     },
     "devDependencies": {
+        "@parcel/transformer-typescript-tsc": "^2.11.0",
         "@types/node": "^20.10.6",
         "@types/react": "^18.2.47",
         "@types/react-dom": "^18.2.18",
@@ -27,6 +27,7 @@
         "parcel-reporter-static-files-copy": "^1.5.3",
         "postcss": "^8.4.33",
         "process": "^0.11.10",
-        "tailwindcss": "^3.4.1"
+        "tailwindcss": "^3.4.1",
+        "typescript": "^5.3.3"
     }
 }
