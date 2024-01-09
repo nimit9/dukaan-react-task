@@ -9,9 +9,10 @@ import TableHeader from './TableHeader';
 import TableRows from './TableRows';
 import { TbArrowsSort } from 'react-icons/tb';
 import { useTableRows } from '@/context/tableRowsContext';
+import Pagination from './Pagination';
 
 const DashboardTable = () => {
-    const { search } = useTableRows()!;
+    const { search, sortRows, searchedRows } = useTableRows()!;
     return (
         <div className="w-full bg-white p-2 rounded-md shadow-sm">
             <div className="flex justify-between w-full">
@@ -26,25 +27,25 @@ const DashboardTable = () => {
                     />
                 </div>
                 <div className="flex gap-2 items-stretch">
-                    <DashboardButton icon={<TbArrowsSort />} text="Sort" />
+                    <DashboardButton
+                        icon={<TbArrowsSort />}
+                        text="Sort"
+                        handleClick={sortRows}
+                    />
                     <DashboardButton icon={<BsDownload />} />
                 </div>
             </div>
-            <TableHeader />
-            <TableRows />
-            <div className="w-full flex justify-center items-center gap-2 py-6">
-                <DashboardButton leftIcon={<FaAngleLeft />} text="Previous" />
-                {Array.from({ length: 10 }).map((_, index) => (
-                    <button
-                        className={`${
-                            index === 4 ? 'bg-[#146eb4] text-white' : 'bg-white'
-                        } p-2 w-6 h-6 rounded-sm flex items-center justify-center text-xs`}
-                    >
-                        {index + 1}
-                    </button>
-                ))}
-                <DashboardButton icon={<FaAngleRight />} text="Next" />
-            </div>
+            {searchedRows && searchedRows.length > 0 ? (
+                <>
+                    <TableHeader />
+                    <TableRows />
+                    <Pagination />
+                </>
+            ) : (
+                <div className="w-full p-10 flex items-center justify-center">
+                    No Rows Found
+                </div>
+            )}
         </div>
     );
 };

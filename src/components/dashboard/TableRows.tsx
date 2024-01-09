@@ -5,11 +5,11 @@ const TableRows = () => {
 
     return (
         <>
-            {searchedRows.slice(0, 10).map((row, rowIndex) => {
+            {searchedRows?.map((row, rowIndex) => {
                 return (
                     <>
                         <div className="grid grid-cols-4 px-3 py-2 text-sm rounded">
-                            <span className="text-[#146eb4] font-medium">
+                            <span className="text-[#146eb4] font-medium cursor-pointer">
                                 {row.orderId}
                             </span>
 
